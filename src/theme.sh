@@ -7,7 +7,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # shellcheck source=src/utils.sh
 . "$CURRENT_DIR/utils.sh"
 
-theme_variation=$(get_tmux_option "@theme_variation" "night")
+theme_variation=$(get_tmux_option "@theme_variation" "storm")
 theme_enable_icons=$(get_tmux_option "@theme_variation" 1)
 
 # shellcheck source=src/palletes/night.sh
@@ -23,7 +23,7 @@ right_separator=$(get_tmux_option "@theme_right_separator" "")
 window_with_activity_style=$(get_tmux_option "@theme_window_with_activity_style" "italics")
 window_status_bell_style=$(get_tmux_option "@theme_status_bell_style" "bold")
 
-IFS=' ' read -r -a plugins <<< "$(get_tmux_option "@theme-plugins" "datetime")"
+IFS=' ' read -r -a plugins <<< "$(get_tmux_option "@theme-plugins" "context datetime")"
 
 tmux set-option -g status-left-length 100
 tmux set-option -g status-right-length 100
